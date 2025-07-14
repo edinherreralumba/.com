@@ -1,0 +1,93 @@
+/* Estilos específicos para la página de Recursos */
+
+.page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/resources-hero-background.jpg') no-repeat center center/cover; /* Imagen de fondo para la cabecera de la página de recursos */
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-hero h1 {
+    color: var(--white);
+    font-size: 3.2em;
+    margin-bottom: 15px;
+}
+
+.page-hero p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.recursos-list {
+    background-color: var(--light-bg);
+    padding: 50px 0;
+}
+
+/* Estilos para las Categorías de Recursos */
+.resource-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 15px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.category-btn {
+    background-color: var(--light-gray);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* El .recursos-grid y .recurso-card ya están definidos en style.css,
+   pero si quisieras sobrescribir o añadir algo específico para esta página,
+   lo harías aquí. */
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 20px;
+    }
+    .page-hero h1 {
+        font-size: 2.5em;
+    }
+    .page-hero p {
+        font-size: 1em;
+    }
+    .resource-categories {
+        padding: 10px;
+        gap: 10px;
+    }
+    .category-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-hero h1 {
+        font-size: 2em;
+    }
+    .resource-categories {
+        flex-direction: column; /* Apila los botones en pantallas muy pequeñas */
+    }
+    .category-btn {
+        width: 100%; /* Botones de categoría ocupan todo el ancho */
+    }
+}

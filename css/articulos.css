@@ -1,0 +1,71 @@
+/* Estilos específicos para la página de Artículos */
+
+.page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/blog-hero-background.jpg') no-repeat center center/cover; /* Imagen de fondo para la cabecera de la página de artículos */
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-hero h1 {
+    color: var(--white);
+    font-size: 3.2em;
+    margin-bottom: 15px;
+}
+
+.page-hero p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.articulos-list {
+    background-color: var(--light-bg);
+    padding: 50px 0;
+}
+
+/* El .articulos-grid y .articulo-card ya están definidos en style.css,
+   pero si quisieras sobrescribir o añadir algo específico para esta página,
+   lo harías aquí. Por ahora, asumimos que los estilos globales son suficientes. */
+
+/* Estilos para Paginación (opcional) */
+.pagination {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 80px 20px;
+    }
+    .page-hero h1 {
+        font-size: 2.5em;
+    }
+    .page-hero p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-hero h1 {
+        font-size: 2em;
+    }
+}
